@@ -9,32 +9,49 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
     </div>
     <hr>
     
-    <form>
-  <div class="mb-12">
-    <label for="exampleInputEmail1" class="form-label">Name</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value = "<?php echo $name; ?>">
-  </div>
+    <form class="row g-3 " action="../process/editProfileProcess.php" method="post" >
+            <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id']?>">
+            <div class="col-md-12">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" name="name" value="<?php echo $_SESSION['user']['name']?>" required>
+            </div>
+            <div class="col-md-12">
+                <label for="release" class="form-label">Phone Number</label>
+                <input type="text"  class="form-control" id="release" name="phonenum" value="<?php echo $_SESSION['user']['phonenum']?>" required>
+            </div>
+            <div class="col-md-12">
+                <label for="genre" class="form-label">Email</label>
+                <input type="text" class="form-control" id="genre" name="email" value="<?php echo $_SESSION['user']['email']?>" required>
+            </div>
+            <div class="col-md-12">
+                <label for="exampleInputEmail1" class="formlabel">Job</label>
+                <select class="form-select" aria-label="Defaultselect example" name="job" id="job">
+                    <!-- <option value="Student" <?php echo $_SESSION['user']['job'] == 'Student' ? ' selected' : ''; ?>>Student</option>
+                    <option value="Lecturer" <?php echo $_SESSION['user']['job'] == 'Lecturer' ? ' selected' : ''; ?>>Lecturer</option>
+                    <option value="Programmer" <?php echo $_SESSION['user']['job'] == 'Programmer' ? ' selected' : ''; ?>>Programmer</option> -->
+                </select>
+            </div>
+            <div class="col-md-12">
+                <label for="exampleInputEmail1" class="formlabel">Membership</label>
+                <select class="form-select" aria-label="Defaultselect example" name="membership" id="membership" disabled>
+                    <!-- <option value="Reguler" <?php echo $_SESSION['user']['membership'] == 'Reguler' ? ' selected' : ''; ?>>Reguler</option>
+                    <option value="Platinum" <?php echo $_SESSION['user']['membership'] == 'Platinum' ? ' selected' : ''; ?>>Platinum</option>
+                    <option value="Gold" <?php echo $_SESSION['user']['membership'] == 'Gold' ? ' selected' : ''; ?>>Gold</option> -->
+                </select>
+            </div>
 
-  <div class="mb-12">
-    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value = "<?php echo $phonenum; ?>">
-  </div>
 
-  <div class="mb-12">
-    <label for="exampleInputEmail1" class="form-label">Email</label>
-    <input type="text" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" value = "<?php echo $email; ?>">
+            <div class="col-12">
+                <button class="btn btn-primary" type="submit" name="editProfile">Edit</button>
+            </div>
+        </form>
+      </div>
   </div>
-  <div class = "mb-12">
-    <label for="validationTooltip03" class="form-label">Job</label>
-    <select class="form-select" id="validationTooltip04">
-        <option>College Student</option>
-        <option>Normal Student</option>
-        <option>Amazing Student</option>
-  </div>
-  <div class = "mb-12">
-  <label for="exampleInputEmail1" class="form-label">Membership</label>
-    <input class="form-control" type="text" value="<?php echo $membership ?>" aria-label="Disabled input example" disabled>
-  </div>
-
-  <button type="submit" class="btn btn-primary">Submit</button>
-</form>
+</aside>
+<script
+    src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+    crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/896ee8ff62.js" crossorigin="anonymous"></script>
+</body>
+</html>    

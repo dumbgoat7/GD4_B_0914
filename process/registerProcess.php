@@ -9,7 +9,13 @@
         $name = $_POST['name'];
         $phonenum = $_POST['phonenum'];
         $membership = $_POST['membership'];
-        // Melakukan insert ke databse dengan query dibawah ini
+        
+        $emailUnik = mysqli_query($con, "SELECT * FROM users WHERE email= '$email'") or die(mysqli_error($con));
+        $num_rows1 = mysqli_num_rows($emailUnik); 
+
+        
+        
+
         $query = mysqli_query($con,
         "INSERT INTO users(email, password, name, phonenum, membership)
         VALUES
