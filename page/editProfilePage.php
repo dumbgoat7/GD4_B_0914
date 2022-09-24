@@ -26,17 +26,17 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
             <div class="col-md-12">
                 <label for="exampleInputEmail1" class="formlabel">Job</label>
                 <select class="form-select" aria-label="Defaultselect example" name="job" id="job">
-                    <!-- <option value="Student" <?php echo $_SESSION['user']['job'] == 'Student' ? ' selected' : ''; ?>>Student</option>
+                    <option value="Student" <?php echo $_SESSION['user']['job'] == 'Student' ? ' selected' : ''; ?>>Student</option>
                     <option value="Lecturer" <?php echo $_SESSION['user']['job'] == 'Lecturer' ? ' selected' : ''; ?>>Lecturer</option>
-                    <option value="Programmer" <?php echo $_SESSION['user']['job'] == 'Programmer' ? ' selected' : ''; ?>>Programmer</option> -->
+                    <option value="Programmer" <?php echo $_SESSION['user']['job'] == 'Programmer' ? ' selected' : ''; ?>>Programmer</option>
                 </select>
             </div>
             <div class="col-md-12">
                 <label for="exampleInputEmail1" class="formlabel">Membership</label>
                 <select class="form-select" aria-label="Defaultselect example" name="membership" id="membership" disabled>
-                    <!-- <option value="Reguler" <?php echo $_SESSION['user']['membership'] == 'Reguler' ? ' selected' : ''; ?>>Reguler</option>
+                    <option value="Reguler" <?php echo $_SESSION['user']['membership'] == 'Reguler' ? ' selected' : ''; ?>>Reguler</option>
                     <option value="Platinum" <?php echo $_SESSION['user']['membership'] == 'Platinum' ? ' selected' : ''; ?>>Platinum</option>
-                    <option value="Gold" <?php echo $_SESSION['user']['membership'] == 'Gold' ? ' selected' : ''; ?>>Gold</option> -->
+                    <option value="Gold" <?php echo $_SESSION['user']['membership'] == 'Gold' ? ' selected' : ''; ?>>Gold</option>
                 </select>
             </div>
 

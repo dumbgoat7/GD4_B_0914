@@ -5,8 +5,8 @@
 solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
     
     <div class="body d-flex justify-content-between">
-        <h4>LIST MOVIE</h4>
-        <i class="bi bi-plus-square" style="float: right"></i>
+        <h4>LIST MOVIE </h4>
+        <a href="../page/addMoviePage.php"><i class="fa-light fa-square-plus" style="float: right; color: red"></i></a>
     </div>
     <hr>
         <table class="table ">
@@ -15,7 +15,7 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                 <th scope="col">No</th>
                 <th scope="col">Name</th>
                 <th scope="col">Genre</th>
-                <th scope="col">Realese</th>
+                <th scope="col">Release</th>
                 <th scope="col">Season</th>
                 <th scope="col"></th>
             </tr>

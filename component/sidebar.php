@@ -73,8 +73,8 @@
                                     <i class="fa fa-dashboard"></i>
                                     <a href="./dashboardPage.php" style="font-weight:600">Dashboard</a>
                                 </div>
-                                <div class="content-user" >
-                                    <i class="fa fa-profile"></i>
+                                <div class="content-menu" >
+                                    <i class="fa fa-user-secret"></i>
                                     <a href="./editProfilePage.php" style="font-weight:600">Edit Profile</a>
                                 </div>
                                 <div class="content-menu ">
