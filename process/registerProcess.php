@@ -14,7 +14,7 @@
         $row_count1 = mysqli_num_rows($emailUnik); 
 
         $phonenumUnik = mysqli_query($con, "SELECT * FROM users WHERE phonenum= '$phonenum'") or die(mysqli_error($con));
-        $row_count2 = mysqli_num_rows($phonenumUnik)
+        $row_count2 = mysqli_num_rows($phonenumUnik);
         
         if($row_count1 != 0) {
             echo
