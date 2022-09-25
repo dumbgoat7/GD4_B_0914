@@ -6,6 +6,7 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
     
     <div class="body d-flex justify-content-between">
         <h4>Edit Profile</h4>
+        
     </div>
     <hr>
     
@@ -16,12 +17,12 @@ solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 
                 <input type="text" class="form-control" id="name" name="name" value="<?php echo $_SESSION['user']['name']?>" required>
             </div>
             <div class="col-md-12">
-                <label for="release" class="form-label">Phone Number</label>
-                <input type="text"  class="form-control" id="release" name="phonenum" value="<?php echo $_SESSION['user']['phonenum']?>" required>
+                <label for="phonenum" class="form-label">Phone Number</label>
+                <input type="text"  class="form-control" id="phonenum" name="phonenum" value="<?php echo $_SESSION['user']['phonenum']?>" required>
             </div>
             <div class="col-md-12">
-                <label for="genre" class="form-label">Email</label>
-                <input type="text" class="form-control" id="genre" name="email" value="<?php echo $_SESSION['user']['email']?>" required>
+                <label for="email" class="form-label">Email</label>
+                <input type="text" class="form-control" id="email" name="email" value="<?php echo $_SESSION['user']['email']?>" required>
             </div>
             <div class="col-md-12">
                 <label for="exampleInputEmail1" class="formlabel">Job</label>
