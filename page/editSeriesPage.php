@@ -1,49 +1,58 @@
 <?php
-    include '../component/sidebar.php'
+    include '../component/sidebar.php';
+    $id = $_GET['id'];
+    $query = mysqli_query($con, "SELECT * from series where id = $id");
+    $series = mysqli_fetch_array($query);
 ?>
 <div class="container p-3 m-4 h-100" style="background-color: #FFFFFF; border-top: 5px
 solid #D40013; box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);" >
     
     <div class="body d-flex justify-content-between">
-        <h4>Edit Profile</h4>
+        <h4>Edit Series</h4>
         
     </div>
     <hr>
     
-    <form class="row g-3 " action="../process/editProfileProcess.php" method="post" >
-            <input type="hidden" name="id" value="<?php echo $_SESSION['user']['id']?>">
+    <form class="row g-3 " action="../process/editSeriesProcess.php" method="post" >
+            <input type="hidden" name="id" value="<?php echo $series['id'] ?>">
             <div class="col-md-12">
                 <label for="name" class="form-label">Name</label>
-                <input type="text" class="form-control" id="name" name="name" value="<?php echo $_SESSION['user']['name']?>" required>
+                <input type="text" class="form-control" id="name" name="name" value="<?php echo $series['name'] ?>" required>
             </div>
+            
             <div class="col-md-12">
-                <label for="phonenum" class="form-label">Phone Number</label>
-                <input type="text"  class="form-control" id="phonenum" name="phonenum" value="<?php echo $_SESSION['user']['phonenum']?>" required>
-            </div>
-            <div class="col-md-12">
-                <label for="email" class="form-label">Email</label>
-                <input type="text" class="form-control" id="email" name="email" value="<?php echo $_SESSION['user']['email']?>" required>
-            </div>
-            <div class="col-md-12">
-                <label for="exampleInputEmail1" class="formlabel">Job</label>
-                <select class="form-select" aria-label="Defaultselect example" name="job" id="job">
-                    <option value="Student" <?php echo $_SESSION['user']['job'] == 'Student' ? ' selected' : ''; ?>>Student</option>
-                    <option value="Lecturer" <?php echo $_SESSION['user']['job'] == 'Lecturer' ? ' selected' : ''; ?>>Lecturer</option>
-                    <option value="Programmer" <?php echo $_SESSION['user']['job'] == 'Programmer' ? ' selected' : ''; ?>>Programmer</option>
+            <!-- https://youtu.be/ntNkP8X1__I -->
+                <label for="exampleInputEmail1" class="formlabel">Genre</label>
+                <select class="form-select" multiple = "multiple" name="genre[]" value="<?php echo $series['genre']?>">
+                    <option value="Romance">Romance</option>
+                    <option value="Sci-fi">Sci-fi</option>
+                    <option value="Horror">Horror</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Family">Family</option>
+                    <option value="Comedy">Comedy</option>
                 </select>
             </div>
             <div class="col-md-12">
-                <label for="exampleInputEmail1" class="formlabel">Membership</label>
-                <select class="form-select" aria-label="Defaultselect example" name="membership" id="membership" disabled>
-                    <option value="Reguler" <?php echo $_SESSION['user']['membership'] == 'Reguler' ? ' selected' : ''; ?>>Reguler</option>
-                    <option value="Platinum" <?php echo $_SESSION['user']['membership'] == 'Platinum' ? ' selected' : ''; ?>>Platinum</option>
-                    <option value="Gold" <?php echo $_SESSION['user']['membership'] == 'Gold' ? ' selected' : ''; ?>>Gold</option>
-                </select>
+                <label for="realese" class="form-label">Release</label>
+                <input type="text"  class="form-control" id="realese" name="realese" value="<?php echo $series['realese']?>" required>
+            </div>
+            <div class="col-md-12">
+                <label for="episode" class="form-label">Episode</label>
+                <input type="text" class="form-control" id="episode" name="episode" value="<?php echo $series['episode']?>" required>
+            </div>
+            <div class="col-md-12">
+                <label or="season" class="form-label">Season</label>
+                <input type="text"  class="form-control" id="season" name="season" value="<?php echo $series['season']?>" required>
+            </div>
+            <div class="col-md-12">
+                <label for="synopsis" class="form-label">Synopsis</label>
+                <input type="text"  class="form-control" id="synopsis" name="synopsis" value="<?php echo $series['synopsis']?>" required>
             </div>
 
 
             <div class="col-12">
-                <button class="btn btn-primary" type="submit" name="editProfile">Edit</button>
+                <button class="btn btn-primary" type="submit" name="editSeries">Edit</button>
             </div>
         </form>
       </div>
